@@ -5,7 +5,7 @@ nav {
 
 nav a {
     color: white;
-    display: block;
+    display: inline-block;
     padding: 20px;
 }
 
@@ -28,4 +28,13 @@ main img {
 
 p {
     padding: 0px;
+}
+
+@media (max-width: 150px) {
+    nav a{
+        padding: 10px;
+    }
+    img{
+        width: auto;
+    }
 }
