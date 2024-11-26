@@ -61,7 +61,7 @@
     top: 20%;
     left: 50%;
     transform: translate(-50%, -20%);
-    font-size: 3em;
+    font-size: 2em;
     color: var(--accent-color);
     text-shadow: 2px 2px 4px var(--background-color);
   }
