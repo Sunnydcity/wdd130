@@ -1,0 +1,126 @@
+/* CSS Variables for the color scheme */
+:root {
+    --primary-color: #0f4c75; /* Deep blue */
+    --secondary-color: #3282b8; /* Light blue */
+    --accent-color: #bbe1fa; /* Soft cyan */
+    --text-color: #ffffff; /* White */
+    --background-color: #1b262c; /* Dark gray-blue */
+  }
+  
+  /* Global styles */
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: auto; /* Center content */
+  }
+  
+  /* Header styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+  }
+  
+  header .logo-box img {
+    max-height: 50px;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 15px;
+    font-weight: 500;
+  }
+  
+  header nav a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* Hero section */
+  .hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .hero img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  
+  .hero h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    font-size: 3em;
+    color: var(--accent-color);
+    text-shadow: 2px 2px 4px var(--background-color);
+  }
+  
+  .hero article {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 20px;
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hero article img {
+    float: right;
+    margin-left: 10px;
+    width: 150px;
+    border-radius: 5px;
+  }
+  
+  /* Section styles */
+  section h2 {
+    color: var(--secondary-color);
+    margin: 20px 0;
+  }
+  
+  section img {
+    margin: 10px;
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 10px 0;
+    color: var(--text-color);
+  }
+  
+  footer .sociallinks a {
+    text-decoration: none;
+  }
+  
+  footer .sociallinks img {
+    width: 30px;
+    margin: 0 10px;
+    vertical-align: middle;
+  }
+  
+  /* Utility classes */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
