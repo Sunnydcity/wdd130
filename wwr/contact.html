@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Rafting Company</title>
+    <meta name="description" content="Get in touch with Rafting Company for inquiries, reservations, or feedback about our services and adventures.">
+    <link rel="stylesheet" href="stylesheet/rafting.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-box">
+                <img src="images/logo26_200.png" alt="Rafting Company logo">
+            </div>
+            <h1>Rafting Company</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Contact Information Section -->
+        <section id="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Address:</strong> 38 Wuse Zone 5, Abuja City</p>
+            <p><strong>Phone:</strong> (+234) 9060992426</p>
+            <p><strong>Email:</strong> <a href="adejubu.sunday@raftingcompany.com">info@raftingcompany.com</a></p>
+            <iframe
+                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9042.163463786674!2d7.461083428989231!3d9.068268371072838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1733636711162!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                class="google-map"
+                allowfullscreen=""
+                loading="lazy"
+            ></iframe>
+        </section>
+
+        <!-- Employee Profiles Section -->
+        <section id="team">
+            <h2>Meet Our Team</h2>
+            <div class="employee">
+                <img src="images/Adv_600.jpg" alt="John Doe - Guide Coordinator">
+                <p>John Doe - Guide Coordinator</p>
+            </div>
+            <div class="employee">
+                <img src="images/Adv-kayak1.jpg" alt="Jane Smith - Reservation Specialist">
+                <p>Jane Smith - Reservation Specialist</p>
+            </div>
+            <div class="employee">
+                <img src="images/Adv6_600.jpg" alt="Emily Brown - Customer Support">
+                <p>Emily Brown - Customer Support</p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="/submit" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <fieldset>
+                    <legend>Purpose of Message</legend>
+                    <label>
+                        <input type="radio" name="purpose" value="general"> General Inquiry
+                    </label>
+                    <label>
+                        <input type="radio" name="purpose" value="reservation"> Reservation Question
+                    </label>
+                    <label>
+                        <input type="radio" name="purpose" value="website"> Website Suggestion
+                    </label>
+                </fieldset>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+
+                <label>
+                    <input type="checkbox" name="subscribe"> Please subscribe me to the monthly newsletter
+                </label>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Adejubu Sunday Rafting Company</p>
+        <nav class="sociallinks">
+            <a href="https://www.facebook.com/photo/?fbid=548175644009889&set=a.548175607343226">
+                <img src="images/facebook_logo_media_popular_icon.png" alt="Facebook">
+            </a>
+            <a href="https://x.com/SplashRafting/header_photo">
+                <img src="images/twitter logo_icon.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/oars_rafting/">
+                <img src="images/instagram_logo_media_popular_icon.png" alt="Instagram">
+            </a>
+            <li><a href="https://app.moqups.com/dbzSpNR3zf1gEmqNMxngYxKyt51Wm8N6/view/page/a1bea6c28">Contact Us wireframe</a></li>
+        </nav>
+    </footer>
+</body>
+</html>
