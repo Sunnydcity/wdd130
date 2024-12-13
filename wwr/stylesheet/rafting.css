@@ -1,13 +1,15 @@
 /* CSS Variables for the color scheme */
 :root {
-    --primary-color: #0f4c75; /* Deep blue */
-    --secondary-color: #3282b8; /* Light blue */
-    --accent-color: #bbe1fa; /* Soft cyan */
-    --text-color: #ffffff; /* White */
-    --background-color: #1b262c; /* Dark gray-blue */
-    --hero-background: #0a9396; /* Hero section background color */
-    --secondary-background: #e9ecef; /* Secondary background */
-    --footer-background: #005f73; /* Footer background color */
+    --primary-color: #004c7a;
+    --secondary-color: #00a8e8;
+    --accent-color: #a2d5f2;
+    --text-color: #ffffff;
+    --background-color: #1a2a3b;
+    --hero-background: #007ea7;
+    --secondary-background: #3082ecec;
+    --footer-background: #3082ecec;
+    --light-gray: #eef1f4;
+    --border-color: #e0e4e8;
 }
 
 /* General Page Layout */
@@ -29,7 +31,7 @@ body {
     justify-content: space-between;
     padding: 10px 20px;
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--text-color);
 }
 
 .logo-box img {
@@ -45,7 +47,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
 }
@@ -54,18 +56,49 @@ nav ul li a.active {
     text-decoration: underline;
 }
 
-/* Main Hero Section */
+/* Hero Section */
 .hero {
     text-align: center;
     padding: 20px;
     background-color: var(--hero-background);
-    color: #fff;
+    color: var(--text-color);
+    position: relative;
+    margin-bottom: 20px;
 }
 
 .hero img {
     max-width: 100%;
     height: auto;
     margin: 10px 0;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    font-size: 1em;
+    color: var(--accent-color);
+    text-shadow: 2px 2px 4px var(--background-color);
+}
+
+.hero article {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero article img {
+    float: right;
+    margin-left: 10px;
+    width: 150px;
+    border-radius: 5px;
 }
 
 /* Contact Info Section */
@@ -85,7 +118,7 @@ nav ul li a.active {
     width: 100%;
     height: 300px;
     margin-top: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
 }
 
 /* Employee Profiles */
@@ -95,7 +128,7 @@ nav ul li a.active {
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--light-blue);
 }
 
 .employee {
@@ -106,7 +139,7 @@ nav ul li a.active {
 .employee img {
     width: 100%;
     border-radius: 10px;
-    border: 2px solid #ccc;
+    border: 2px solid var(--border-color);
 }
 
 .employee p {
@@ -117,7 +150,7 @@ nav ul li a.active {
 /* Contact Form Section */
 #contact-form {
     padding: 20px;
-    background-color: #f1f1;
+    background-color: var(--primary-background);
 }
 
 #contact-form form {
@@ -135,18 +168,14 @@ nav ul li a.active {
 #contact-form input, #contact-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #f1f1;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     font-size: 1rem;
 }
 
-#contact-form input[type="radio"] {
-    width: auto;
-}
-
 #contact-form button {
     background-color: var(--primary-color);
-    color: #f1f1;
+    color: var(--text-color);
     border: none;
     padding: 10px 15px;
     font-size: 1rem;
@@ -164,52 +193,12 @@ footer {
     padding: 15px;
     text-align: center;
     background-color: var(--footer-background);
-    color: #fff;
+    color: var(--text-color);
 }
 
 footer nav a img {
     height: 30px;
     margin: 0 10px;
-}
-
-/* Hero section */
-.hero {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    font-size: 2em;
-    color: var(--accent-color);
-    text-shadow: 2px 2px 4px var(--background-color);
-}
-
-.hero article {
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-    right: 5%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    padding: 20px;
-    color: var(--text-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.hero article img {
-    float: right;
-    margin-left: 10px;
-    width: 150px;
-    border-radius: 5px;
 }
 
 /* History Section */
@@ -231,10 +220,9 @@ section p {
 .adventure-awaits {
     padding: 40px 20px;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: var(--light-gray);
 }
 
-/* Adventure Gallery */
 .adventure-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -265,17 +253,88 @@ section p {
     text-align: center;
 }
 
-section img {
-    margin: 10px;
-    width: 200px;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+/* Featured Trips Section */
+.featured-trips {
+    padding: 2rem;
+    background: var(--light-gray);
+    text-align: center;
 }
 
-/* Utility classes */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+.featured-trips h2 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.trip-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.trip {
+    background: var(--secondary-background);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 1rem;
+    max-width: 300px;
+    text-align: left;
+}
+
+.trip h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.trip a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.trip a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--hero-background);
+}
+
+.btn-primary {
+    background: #ff5722;
+}
+
+.btn-primary:hover {
+    background: #e64a19;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .trip-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trip-card {
+        max-width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
 }
